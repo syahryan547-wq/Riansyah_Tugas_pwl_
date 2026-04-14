@@ -8,7 +8,7 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('queue')->index(); // tambah index biar optimal
+            $table->string('queue')->index(); 
             $table->longText('payload');
             $table->unsignedTinyInteger('attempts');
             $table->unsignedInteger('reserved_at')->nullable();
@@ -44,7 +44,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        // dibalik urutannya biar aman
+        
         Schema::dropIfExists('failed_jobs');
         Schema::dropIfExists('job_batches');
         Schema::dropIfExists('jobs');
