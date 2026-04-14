@@ -8,8 +8,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('npm', 20)->unique(); // tambahan dari ERD
-            $table->string('username')->unique(); // beda dikit (dibuat unique)
+            $table->string('npm', 20)->unique(); 
+            $table->string('username')->unique(); 
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // optional (biarin aja, bawaan Laravel)
+        
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
