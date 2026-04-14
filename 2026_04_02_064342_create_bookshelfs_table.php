@@ -8,7 +8,7 @@ return new class extends Migration
     {
         Schema::create('bookshelfs', function (Blueprint $table) {
             $table->id();
-            $table->string('code', 10)->unique(); // dibuat unique biar lebih aman
+            $table->string('code', 10)->unique(); 
             $table->string('name');
             $table->timestamps();
         });
