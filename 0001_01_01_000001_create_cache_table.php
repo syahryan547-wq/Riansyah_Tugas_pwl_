@@ -8,7 +8,7 @@ return new class extends Migration
     {
         Schema::create('cache', function (Blueprint $table) {
             $table->string('key')->primary();
-            $table->text('value'); // sedikit beda (lebih umum)
+            $table->text('value'); 
             $table->integer('expiration')->index();
         });
 
